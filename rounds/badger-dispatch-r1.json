@@ -2,7 +2,7 @@
   "round": "badger-dispatch-r1",
   "client": "Badger Infrastructure Solutions",
   "title": "Dispatch Console — Round 1",
-  "prototypeUrl": "prototypes/sample-dispatch/index.html",
+  "prototypeUrl": "prototypes/dispatch-portal-v20/index.html",
   "intro": "Thanks for testing with us. This is an early prototype — it isn't wired to live data, so some numbers are placeholders. We're after your gut reactions on the layout and flow, not whether the data is right.",
   "tasks": [
     {
