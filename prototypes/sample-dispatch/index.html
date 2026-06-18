@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sample Dispatch Board</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #F6F7F9;
+    color: #1B1F27;
+  }
+  header {
+    padding: 18px 26px;
+    border-bottom: 1px solid #E4E7EC;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header h1 { font-size: 17px; margin: 0; font-weight: 650; }
+  .badge { font-size: 12px; color: #667085; background: #F2F4F7; padding: 4px 10px; border-radius: 20px; }
+  .wrap { padding: 24px 26px; }
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .col h2 { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #667085; margin: 0 0 12px; }
+  .card {
+    background: #fff;
+    border: 1px solid #E4E7EC;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    cursor: grab;
+    transition: box-shadow 0.15s, border-color 0.15s;
+  }
+  .card:hover { box-shadow: 0 4px 14px rgba(16, 24, 40, 0.08); border-color: #D0D5DD; }
+  .card .job { font-weight: 600; font-size: 14.5px; }
+  .card .meta { font-size: 12.5px; color: #667085; margin-top: 5px; }
+  .pill { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 6px; margin-top: 9px; font-weight: 600; }
+  .pill.unassigned { background: #FEF0C7; color: #B54708; }
+  .pill.assigned { background: #D1FADF; color: #027A48; }
+  .pill.idle { background: #EAECF0; color: #475467; }
+  .note { margin-top: 22px; font-size: 12.5px; color: #98A2B3; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Dispatch Board</h1>
+    <span class="badge">Sample data · not live</span>
+  </header>
+  <div class="wrap">
+    <div class="cols">
+      <div class="col">
+        <h2>Unassigned</h2>
+        <div class="card"><div class="job">Hydrovac — Riverside Ave</div><div class="meta">Daylighting · 4 hrs est.</div><span class="pill unassigned">Needs crew</span></div>
+        <div class="card"><div class="job">Potholing — Lot 12</div><div class="meta">Utility locate · 2 hrs est.</div><span class="pill unassigned">Needs crew</span></div>
+      </div>
+      <div class="col">
+        <h2>In progress</h2>
+        <div class="card"><div class="job">Trench excavation — Site B</div><div class="meta">Crew Alpha · on site since 08:10</div><span class="pill assigned">Crew Alpha</span></div>
+        <div class="card"><div class="job">Slot trenching — Depot Rd</div><div class="meta">Crew Delta · en route</div><span class="pill assigned">Crew Delta</span></div>
+      </div>
+      <div class="col">
+        <h2>Crews available</h2>
+        <div class="card"><div class="job">Crew Bravo</div><div class="meta">Truck 204 · base yard</div><span class="pill idle">Free</span></div>
+        <div class="card"><div class="job">Crew Charlie</div><div class="meta">Truck 211 · base yard</div><span class="pill idle">Free</span></div>
+      </div>
+    </div>
+    <p class="note">This is a placeholder prototype shipped with the UAT runner so the frame isn't empty. Replace it with a real prototype by pointing the round's <code>prototypeUrl</code> at it.</p>
+  </div>
+</body>
+</html>

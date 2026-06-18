@@ -1,0 +1,42 @@
+{
+  "round": "badger-dispatch-r1",
+  "client": "Badger Infrastructure Solutions",
+  "title": "Dispatch Console — Round 1",
+  "prototypeUrl": "prototypes/sample-dispatch/index.html",
+  "intro": "Thanks for testing with us. This is an early prototype — it isn't wired to live data, so some numbers are placeholders. We're after your gut reactions on the layout and flow, not whether the data is right.",
+  "tasks": [
+    {
+      "title": "Get your bearings on the board",
+      "instruction": "Take a moment to look over the dispatch board without clicking anything yet.\n\nTell us what you think this screen is for, and what you'd expect to be able to do here.",
+      "focus": [
+        "Is it clear which jobs still need a crew?",
+        "Does anything on screen feel unfamiliar or unexpected?"
+      ]
+    },
+    {
+      "title": "Assign a crew to an unassigned job",
+      "instruction": "Find a job that has no crew against it, and assign one of the available crews to it.\n\nNarrate what you're looking for as you go.",
+      "focus": [
+        "Was it obvious how to start the assignment?",
+        "Did you have enough information to choose the right crew?",
+        "Anything you wanted to see that wasn't there?"
+      ]
+    },
+    {
+      "title": "Check a crew's current status",
+      "instruction": "Pick any crew and find out what they're currently working on and where they are.",
+      "focus": [
+        "Could you tell at a glance whether a crew was free or busy?",
+        "Is the location detail useful, or just noise?"
+      ]
+    },
+    {
+      "title": "Handle a same-day reassignment",
+      "instruction": "Imagine a hydrovac job just became urgent. Move it to a different crew than the one it's currently on.",
+      "focus": [
+        "How risky did that action feel — were you confident it saved?",
+        "Would you trust doing this during a live shift?"
+      ]
+    }
+  ]
+}
