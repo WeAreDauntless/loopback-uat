@@ -4,23 +4,23 @@
  *
  *   npm run seed
  *
- * Requires NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in .env.local.
+ * Requires NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SECRET_KEY in .env.local.
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createClient } from "@supabase/supabase-js";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const secretKey = process.env.SUPABASE_SECRET_KEY;
 
-if (!url || !serviceKey) {
+if (!url || !secretKey) {
   console.error(
-    "Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.local",
+    "Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SECRET_KEY in .env.local",
   );
   process.exit(1);
 }
 
-const supabase = createClient(url, serviceKey, {
+const supabase = createClient(url, secretKey, {
   auth: { persistSession: false },
 });
 

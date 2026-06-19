@@ -13,12 +13,12 @@ npm run dev      # next dev (http://localhost:3000)
 npm run build    # next build
 npm run start    # next start (serve production build)
 npm run lint     # eslint (flat config: eslint.config.mjs)
-npm run seed     # one-off: migrate rounds/*.json into Supabase (needs service-role key)
+npm run seed     # one-off: migrate rounds/*.json into Supabase (needs secret key)
 ```
 
 There is no test suite. Verification is manual via `npm run dev`.
 
-`.env.local` must define `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` (both shipped to the client). `SUPABASE_SERVICE_ROLE_KEY` is needed only for `npm run seed` and must never be deployed.
+`.env.local` must define `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (both shipped to the client; use the new `sb_publishable_...` key, not the legacy anon JWT). `SUPABASE_SECRET_KEY` (the new `sb_secret_...` key, not the legacy service_role JWT) is needed only for `npm run seed` and must never be deployed.
 
 ## Stack
 

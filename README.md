@@ -39,12 +39,13 @@ documents which step they were on.
    (public read, authenticated write), and expects admins to be provisioned in
    the dashboard under Authentication > Users.
 
-3. Fill in `.env.local` (Settings > API in the Supabase dashboard):
+3. Fill in `.env.local` (Settings > API Keys — use the new keys, not the legacy
+   anon/service_role JWTs):
 
    ```
    NEXT_PUBLIC_SUPABASE_URL=https://soobmldsdtrybhfjjpti.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon public key>
-   SUPABASE_SERVICE_ROLE_KEY=<service_role key>   # seed script only; not deployed
+   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<sb_publishable_...>
+   SUPABASE_SECRET_KEY=<sb_secret_...>   # seed script only; not deployed
    ```
 
 4. (Optional) Seed the legacy rounds from `rounds/*.json`:
@@ -84,8 +85,8 @@ paragraphs. Nothing is rendered as raw HTML, so copy is safe to paste in.
 ## Deploy
 
 Import the repo on Vercel (framework preset: Next.js). Add the two public env
-vars (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`). Keep the
-service-role key local-only — it's just for seeding.
+vars (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`). Keep
+the secret key local-only — it's just for seeding.
 
 ## Data model
 
